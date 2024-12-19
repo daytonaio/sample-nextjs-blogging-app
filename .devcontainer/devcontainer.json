@@ -1,0 +1,25 @@
+{
+  "name": "Bloggo Dev Container",
+  "image":"mcr.microsoft.com/devcontainers/javascript-node",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  },
+  "features": {
+    "docker-in-docker": "latest"
+  },
+ "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "postCreateCommand": ".devcontainer/minds_start.sh",
+  "forwardPorts": [47334] 
+ 
+
+  
+  
+}
